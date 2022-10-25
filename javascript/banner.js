@@ -1,4 +1,4 @@
-const myslide = document.querySelectorAll(".myslide"),
+const myslide = document.querySelectorAll(".vim"),
   dot = document.querySelectorAll(".dot");
 let counter = 1;
 slidefun(counter);
@@ -20,7 +20,7 @@ function currentSlide(n) {
 }
 function resetTimer() {
   clearInterval(timer);
-  timer = setInterval(autoSlide, 8000);
+  timer = setInterval(autoSlide, 1000);
 }
 
 function slidefun(n) {
@@ -37,6 +37,10 @@ function slidefun(n) {
   if (n < 1) {
     counter = myslide.length;
   }
-  myslide[counter - 1].style.display = "block";
+
+  if (window.matchMedia("(min-width: 640px)")) {
+    myslide[counter - 1].style.display = "flex";
+  } else myslide[counter - 1].style.display = "block";
+
   dot[counter - 1].className += " active";
 }

@@ -46,3 +46,8 @@
   margin: 0 10px;
   cursor: pointer;
 }
+
+.controls .doting span.active,
+.controls .doting span.dot:hover {
+  background-color: black; /* blue */
+}

@@ -106,71 +106,79 @@
       <section class="banner">
         <div class="banner_container">
           <!-- BANNER TRANSITIONS 1-->
-          <div class="transitions_1">
-            <img class="banner_1" src="./assets/img/banner_background_2.png" alt="b_one">
-            <div class="texting_1">
-              <h1>
-                Todos los productos disponibles para tu outfit!!
-              </h1>
-            </div>
-            <div class="banner_logo">
-              <img src="assets/img/nofondo_dark.png" alt="logo_banner">
+          <div class="vim">
+            <div class="transitions_1">
+              <img class="banner_1" src="./assets/img/banner_background_2.png" alt="b_one">
+              <div class="texting_1">
+                <h1>
+                  Todos los productos disponibles para tu outfit!!
+                </h1>
+              </div>
+              <div class="banner_logo">
+                <img src="assets/img/nofondo_dark.png" alt="logo_banner">
+              </div>
             </div>
           </div>
           <!-- BANNER TRANSITIONS 2-->
-          <div class="transitions_2">
-            <div class="texting_2">
-              <div>
-                <h1>Flexibilidad</h1>
-                <p>Calidad para cada tipo de gusto</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Nemo blanditiis repudiandae quos pariatur iste alias quo quibusdam quia, asperiores eum.
-                </p>
-                <button>Nuestras categorías</button>
+          <div class="vim">
+            <div class="transitions_2">
+              <div class="texting_2">
+                <div>
+                  <h1>Flexibilidad</h1>
+                  <p>Calidad para cada tipo de gusto</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Nemo blanditiis repudiandae quos pariatur iste alias quo quibusdam quia, asperiores eum.
+                  </p>
+                  <button>Nuestras categorías</button>
+                </div>
               </div>
-            </div>
-            <div class="banner_2">
-              <img src="./assets/img/zapatilla.png" alt="b_two" />
-              <span></span>
+              <div class="banner_2">
+                <img src="./assets/img/zapatilla.png" alt="b_two" />
+                <span></span>
+              </div>
             </div>
           </div>
           <!-- BANNER TRANSITIONS 3-->
-          <div class="transitions_3">
-            <div class="texting_3">
-              <h1>La temporada black and white ya esta aquí</h1>
+          <div class="vim">
+            <div class="transitions_3">
+              <div class="texting_3">
+                <h1>La temporada black and white ya esta aquí</h1>
+              </div>
+              <img src="./assets/img/banner_background_1.png" alt="zapa">
             </div>
-            <img src="./assets/img/banner_background_1.png" alt="zapa">
           </div>
           <!-- BANNER TRANSITIONS 4-->
-          <div class="transitions_4">
-            <div class="banner_4">
-              <img src="./assets/img/banner_logos.png" alt="zapa">
-            </div>
-            <div class="texting_4">
-              <div>
-                <h1>Rentabilidad</h1>
-                <p>Las mejores marcas a tu disposición</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Nemo
-                  blanditiis
-                  repudiandae quos pariatur iste alias quo quibusdam quia, asperiores eum.
-                </p>
-                <button>Descubre más</button>
+          <div class="vim">
+            <div class="transitions_4">
+              <div class="banner_4">
+                <img src="./assets/img/banner_logos.png" alt="zapa">
+              </div>
+              <div class="texting_4">
+                <div>
+                  <h1>Rentabilidad</h1>
+                  <p>Las mejores marcas a tu disposición</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Nemo
+                    blanditiis
+                    repudiandae quos pariatur iste alias quo quibusdam quia, asperiores eum.
+                  </p>
+                  <button>Descubre más</button>
+                </div>
               </div>
             </div>
           </div>
           <!--CONTROLS-->
           <div class="controls">
-            <button class="prev"><i class="ri-arrow-left-line"></i></button>
+            <button type="button" class="prev" onclick="plusSlides(-1)"><i class="ri-arrow-left-line"></i></button>
             <div class="doting">
               <span class="dot" onclick="currentSlide(1)"></span>
               <span class="dot" onclick="currentSlide(2)"></span>
               <span class="dot" onclick="currentSlide(3)"></span>
               <span class="dot" onclick="currentSlide(4)"></span>
             </div>
-            <button class="next"><i class="ri-arrow-right-line"></i></button>
+            <button type="button" class="next" onclick="plusSlides(1)"><i class="ri-arrow-right-line"></i></button>
           </div>
         </div>
       </section>
@@ -216,7 +224,7 @@
     </footer>
   </div>
 
-  <script src="script.js" type="module"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

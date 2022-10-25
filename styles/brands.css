@@ -1,0 +1,32 @@
+.slider_brands {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+.slider_brands .slide_track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider_brands .brand_slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 250px;
+}
+
+.slider_brands .brand_slide img {
+  width: 40%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-230px * 6));
+  }
+}

@@ -1,0 +1,48 @@
+/* ---- BANNER TRANSITIONS ---- */
+@import url("./banner_transitions.css");
+
+/* ---- BANNER ---- */
+.banner {
+  display: flex;
+  justify-content: center;
+  background-color: #e5e7eb;
+  padding: 2.5rem;
+}
+.banner .banner_container {
+  max-width: 1280px;
+  width: 100%;
+}
+
+/* ---- CONTROLS ---- */
+.controls {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.controls button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: black;
+  color: white;
+}
+.controls button.prev {
+  padding-left: 1rem;
+  padding-right: 3rem;
+}
+.controls button.next {
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+.controls .doting {
+  display: flex;
+  align-items: center;
+}
+.controls .doting span {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}

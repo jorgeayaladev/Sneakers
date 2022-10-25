@@ -1,0 +1,27 @@
+/*CSS Structure*/
+
+/*Global Styles*/
+@import url("./styles/globals.css");
+
+/*Header Styles*/
+@import url("./styles/header.css");
+
+/*Brand Styles*/
+@import url("./styles/brands.css");
+
+/*Banner Styles*/
+@import url("./styles/banner.css");
+
+/*NavBar*/
+.flexitem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flexcenter {
+  display: flex;
+  justify-content: center;
+}
+
+/*Banner*/

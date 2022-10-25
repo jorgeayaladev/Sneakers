@@ -1,0 +1,84 @@
+/* -------------------------------------- */
+/* --------------- HEADER --------------- */
+/* -------------------------------------- */
+
+/* ---- PROMOTION ---- */
+.promotion {
+  padding: 0.25rem 0.25rem;
+  color: white;
+  background-color: rgb(127 29 29);
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+/* ---- NAVBAR ---- */
+.nav_main {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background-color: black;
+}
+
+.nav_menu {
+  display: flex;
+  gap: 2.5rem;
+}
+.nav_menu a img {
+  width: 4rem;
+}
+.nav_menu ul {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  color: white;
+}
+
+.nav_options {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.nav_options .search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav_options .search button {
+  position: absolute;
+  left: 0.5rem;
+}
+.nav_options .search input {
+  background-color: black;
+  border-radius: 30px;
+  border: 1px solid;
+  padding: 0.2rem 2rem;
+  font-size: 1rem;
+}
+
+.nav_options .menu {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .nav_options .search {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav_menu ul li {
+    display: none;
+  }
+
+  .nav_options .menu {
+    display: block;
+  }
+
+  .nav_options .user {
+    display: none;
+  }
+}

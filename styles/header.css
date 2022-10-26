@@ -2,6 +2,12 @@
 /* --------------- HEADER --------------- */
 /* -------------------------------------- */
 
+header {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
 /* ---- PROMOTION ---- */
 .promotion {
   padding: 0.25rem 0.25rem;
@@ -17,7 +23,8 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem 2.5rem;
-  background-color: black;
+  max-width: 1480px;
+  width: 100%;
 }
 
 .nav_menu {
@@ -25,7 +32,7 @@
   gap: 2.5rem;
 }
 .nav_menu a img {
-  width: 4rem;
+  width: 5rem;
 }
 .nav_menu ul {
   display: flex;

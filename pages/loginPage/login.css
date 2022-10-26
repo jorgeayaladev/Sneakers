@@ -1,0 +1,122 @@
+
+html {
+  height: 100%;
+}
+
+
+body {
+  height: 100%;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: linear-gradient(180deg, #000000 0%, #232323 100%);  
+  border-radius: 25px;
+  width: 350px;
+  height: 360px;
+  padding-bottom: 40px;
+  position: relative;
+  top: 150px;
+  left: -300px;
+  transform: translateX(calc(300px));
+  transition: 1s;
+  
+}
+
+form{
+  /* background-color: aquamarine; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+}
+
+label {
+  color: rgb(255, 255, 255);
+}
+
+input[type=submit] {
+  background-color: #dcdcdc;
+  width: 120px;
+  padding: 6px;
+  border: 1px solid #000000 ;
+}
+
+input[type=submit]:hover {
+  color: #ffffff;
+  background-color: #272727;
+  border: 1px solid #ffffff ;
+}
+
+
+form input, label { 
+  padding: 5px;
+  border-radius: 5px;
+  
+  
+  position: relative;
+  animation-name: inputanimate;
+  animation-duration: 3s;
+
+}
+
+li {
+  margin: 15px 0px 0px 0px;
+  height: 20px;
+}
+
+li input{
+  margin-left: 5px;
+  margin-right: 3px;
+}
+
+li label {
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+li {
+  list-style-type: none;
+}
+
+.login h3 {
+  font-size: 22px;
+  position: relative;
+  animation-name: loginanimate;
+  animation-duration: 3s;
+  color: #fecb2a;
+}
+
+
+@keyframes inputanimate {
+
+  from { 
+    left: -400px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+
+}
+
+@keyframes loginanimate {
+
+  from { 
+    top: -350px;
+    opacity: 0;
+    color: white;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+    color: #fecb2a;
+  }
+
+}
+

@@ -1,3 +1,6 @@
+/* ---- PROMOTION ---- */
+@import url("./promotion.css");
+
 /* -------------------------------------- */
 /* --------------- HEADER --------------- */
 /* -------------------------------------- */
@@ -6,16 +9,6 @@ header {
   display: flex;
   justify-content: center;
   background-color: black;
-}
-
-/* ---- PROMOTION ---- */
-.promotion {
-  padding: 0.25rem 0.25rem;
-  color: white;
-  background-color: rgb(127 29 29);
-  text-align: center;
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 /* ---- NAVBAR ---- */

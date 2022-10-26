@@ -12,6 +12,9 @@
 /*Banner Styles*/
 @import url("./styles/banner.css");
 
+/*Footer Styles*/
+@import url("./styles/footer.css");
+
 /*NavBar*/
 .flexitem {
   display: flex;
@@ -24,4 +27,13 @@
   justify-content: center;
 }
 
-/*Banner*/
+/*Bootstrap*/
+.hovereffect a:hover {
+  background-color: grey;
+  zoom: 1;
+}
+
+.hovereffect:hover img {
+  transform: scale(1.05);
+  background-color: grey;
+}

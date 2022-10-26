@@ -1,0 +1,32 @@
+/* ---- PROMOTION ---- */
+.promotion {
+  padding: 0.25rem 0.25rem;
+  background-color: #d4ab2471;
+  text-align: center;
+  height: 35px;
+  margin: 5px auto;
+}
+
+/* ---- PROMOTION LIST ---- */
+.promo-list {
+  overflow: hidden;
+  width: 100%;
+}
+
+.promo-list > ul {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  word-spacing: 0.1em;
+  list-style-type: none;
+  padding: 0px;
+  white-space: nowrap;
+  display: inline-flex;
+}
+
+.promo-list ul li {
+  margin-right: 150px;
+}
+
+.w-100 {
+  width: 100%;
+}

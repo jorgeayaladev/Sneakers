@@ -15,6 +15,9 @@
 /*Footer Styles*/
 @import url("./styles/footer.css");
 
+/*Login */
+@import url("./styles/login.css");
+
 /*NavBar*/
 .flexitem {
   display: flex;

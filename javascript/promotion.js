@@ -2,9 +2,9 @@
 const ul = document.querySelector('ul')
 
 const data = [
-  'ENVÍOS GRATUITOS PARA PEDIDOS SUPERIORES A S/.100.00. 10 mes devoluciones gratuitas.',
+  'APROVECHA EL BLACK FRIDAY! 40% DE DESCUENTO EN TODA LA TIENDA POR CIERRE DE TEMPORADA.',
   'ENVÍOS GRATUITOS PARA PEDIDOS SUPERIORES A S/.70.00. 7 mes devoluciones gratuitas.',
-  'ENVÍOS GRATUITOS PARA PEDIDOS SUPERIORES A S/.40.00. 4 mes devoluciones gratuitas.',
+  'OFERTAS EN DEPORTIVAS A 15% DSCTO ',
   'ENVÍOS GRATUITOS PARA PEDIDOS SUPERIORES A S/.30.00. 3 mes devoluciones gratuitas.',
   'ENVÍOS GRATUITOS PARA PEDIDOS SUPERIORES A S/.10.00. 1 mes devoluciones gratuitas.',
 ]

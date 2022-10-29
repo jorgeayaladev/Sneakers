@@ -41,3 +41,16 @@ function slidefun(n) {
   myslide[counter - 1].style.display = "block";
   dot[counter - 1].className += " active";
 }
+
+
+// document.getElementById("buttonlogin").addEventListener( "click", function(){ 
+
+//     console.log('button login clicked');
+
+//     let boxLogin =  document.getElementById('login')
+
+//     console.log(boxlogin.display);
+
+//     boxLogin.display = "block" 
+
+//  } )

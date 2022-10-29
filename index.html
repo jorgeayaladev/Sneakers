@@ -10,7 +10,12 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <title>Sneakers</title>
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous">    
+  </script>
+    <title>Sneakers</title>
 </head>
 
 <body>
@@ -18,9 +23,8 @@
     <!--PROMOTION-->
     <aside class="promotion">
       <div class="promo-list w-100">
-        <ul id="promoul">
-          <li><b>APROVECHA EL BLACK FRIDAY!</b> 40% DE DESCUENTO EN TODA LA TIENDA POR CIERRE DE TEMPORADA</li>
-        </ul>
+        <ul id="promoul">            
+        </ul> 
       </div>
     </aside>
 
@@ -66,13 +70,17 @@
           <button class="menu">
             <i class="ri-menu-3-fill"></i>
           </button>
-          <button class="user">
-            <a href="./pages/loginPage/login.html"><i class="ri-user-fill"></i></a>
+          <button id="buttonlogin" class="user" >
+            <!-- <a href="./pages/loginPage/login.html"></a> -->
+            <i class="ri-user-fill"></i>
           </button>
         </div>
       </nav>
     </header>
 
+    
+
+    
     <!--MAIN-->
     <main>
       <!--BRANDS-->
@@ -393,7 +401,44 @@
     </div>
   </div>
 
+  <div id="login">
+    <div>
+      <h3>Login</h3>
+    </div>
+    <div class="form-login">
+      <form action="submit" id="form-box">
+        <label for="">Usuario</label>
+        <input type="text" placeholder="nombre usuario" required>
+        <br>
+        <label for="">Clave</label>
+        <input type="password" placeholder="clave" required>
+        <li>
+          <input type="checkbox" value="Remember me"><label for="Remember me" id="remember">Remember me</label>
+        </li>
+        <br>
+        <input type="submit" value="ingresar">
+      </form>
+    </div>
+
   <script src="script.js"></script>
+  
+  <script type="text/javascript" >
+    
+    $("#buttonlogin").click(function(){
+      $("#login").toggle(function(e) {
+          if ($(this).is(":visible")) {
+              $("#login").show();
+              $("#buttonlogin").css('color', 'grey');
+          }
+          else {
+              $("#login").hide(); 
+              $("#buttonlogin").css('color','white');
+          };
+      });
+    });
+
+  </script>
+  <script src="./javascript/promotion.js"></script>
 </body>
 
 </html>

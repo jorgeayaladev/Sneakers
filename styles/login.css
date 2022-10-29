@@ -1,14 +1,6 @@
 
-html {
-  height: 100%;
-}
 
-
-body {
-  height: 100%;
-}
-
-.login {
+#login {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -16,17 +8,21 @@ body {
   background-image: linear-gradient(180deg, #000000 0%, #232323 100%);  
   border-radius: 25px;
   width: 350px;
-  height: 360px;
+  height: 350px;
   padding-bottom: 40px;
-  position: relative;
-  top: 150px;
-  left: -300px;
-  transform: translateX(calc(300px));
-  transition: 1s;
+  position: fixed;
+  top: 125px;
+  right: -350px;
+  z-index: 10;
+  transform: translateX(-350px);
+  transition: 3s;
+  display: none;
+  /* animation-name: inputanimate;
+  animation-duration: 3s; */
   
 }
 
-form{
+.form-login form{
   /* background-color: aquamarine; */
   display: flex;
   flex-direction: column;
@@ -35,59 +31,58 @@ form{
 
 }
 
-label {
+#form-box label {
   color: rgb(255, 255, 255);
 }
 
-input[type=submit] {
+#form-box input[type=submit] {
   background-color: #dcdcdc;
   width: 120px;
   padding: 6px;
   border: 1px solid #000000 ;
 }
 
-input[type=submit]:hover {
+#form-box input[type=submit]:hover {
   color: #ffffff;
   background-color: #272727;
   border: 1px solid #ffffff ;
 }
 
 
-form input, label { 
+#form-box input, label { 
   padding: 5px;
   border-radius: 5px;
-  
-  
   position: relative;
-  animation-name: inputanimate;
-  animation-duration: 3s;
-
+  /* animation-name: inputanimate;
+  animation-duration: 3s; */
 }
 
-li {
+#form-box li {
   margin: 15px 0px 0px 0px;
   height: 20px;
 }
 
-li input{
+#form-box li input{
   margin-left: 5px;
   margin-right: 3px;
 }
 
-li label {
+#form-box li label {
   font-size: 13px;
   vertical-align: middle;
 }
 
-li {
+#form-box li {
   list-style-type: none;
 }
 
-.login h3 {
+#login h3 {
+  padding-top: 20px;
+  text-align: center;
   font-size: 22px;
   position: relative;
-  animation-name: loginanimate;
-  animation-duration: 3s;
+  /* animation-name: loginanimate;
+  animation-duration: 3s; */
   color: #fecb2a;
 }
 
@@ -95,12 +90,12 @@ li {
 @keyframes inputanimate {
 
   from { 
-    left: -400px;
-    opacity: 0;
+    right: -300px;
+    /* opacity: 0; */
   }
   to {
-    left: 0px;
-    opacity: 1;
+    right: 0px;
+    /* opacity: 1; */
   }
 
 }

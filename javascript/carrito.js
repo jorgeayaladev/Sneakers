@@ -31,18 +31,17 @@ function deleteProduct(e) {
                 let priceReduce = parseFloat(value.price) * parseFloat(value.amount);
                 totalCard = totalCard - priceReduce
                 totalCard = totalCard.toFixed(2);
+                countProduct = countProduct - value.amount
             }
         })
         buyThings = buyThings.filter(product => product.id !== deleteId);
-
-       // countProduct--;
     }
 
     if (buyThings.length === 0) {
         priceTotal.innerHTML = 0;
         //amountProduct.innerHTML = 0;
     }
-    loadHtml();
+    loadHtml();    
 }
 
 function readTheContent(product) {
@@ -62,20 +61,21 @@ function readTheContent(product) {
     if (exist) {
         const pro = buyThings.map(product => {
             if (product.id == infoProduct.id) {
-                product.amount++;
+                product.amount++;                
                 return product;
-            } else {
+            } else {                
                 return product
             }
         });
         buyThings = [...pro];
+        countProduct++;
     } else {
         buyThings = [...buyThings, infoProduct]
-        //countProduct++;
+        countProduct++;
     }
 
     loadHtml();
-    //console.log(infoProduct);
+    
 }
 
 function loadHtml() {
@@ -98,9 +98,12 @@ function loadHtml() {
         containerBuyCart.appendChild(row);
 
         priceTotal.innerHTML = totalCard;
-
+        
         //amountProduct.innerHTML = countProduct;
     });
+    console.log(countProduct);
+    document.getElementById('count-prod').innerHTML = countProduct
+
 }
 
 function clearHtml() {

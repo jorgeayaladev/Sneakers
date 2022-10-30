@@ -23,7 +23,6 @@
 }
 
 .form-login form{
-  /* background-color: aquamarine; */
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -53,8 +52,8 @@
   padding: 5px;
   border-radius: 5px;
   position: relative;
-  /* animation-name: inputanimate;
-  animation-duration: 3s; */
+  animation-name: inputanimate;
+  animation-duration: 3s;
 }
 
 #form-box li {
@@ -81,8 +80,8 @@
   text-align: center;
   font-size: 22px;
   position: relative;
-  /* animation-name: loginanimate;
-  animation-duration: 3s; */
+  animation-name: loginanimate;
+  animation-duration: 3s;
   color: #fecb2a;
 }
 

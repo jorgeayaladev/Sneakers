@@ -18,6 +18,12 @@
 /*Login */
 @import url("./styles/login.css");
 
+/*Nosotros*/
+@import url("./styles/nosotros.css");
+
+/*Productos */
+@import url("./styles/productos.css");
+
 /*NavBar*/
 .flexitem {
   display: flex;

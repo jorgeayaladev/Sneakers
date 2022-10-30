@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous">    
+  </script>
+    <title>Sneakers</title>
+</head>
+
+<body>
+  <div>
+    <!--PROMOTION-->
+    <aside class="promotion">
+      <div class="promo-list w-100">
+        <ul id="promoul">            
+        </ul> 
+      </div>
+    </aside>
+
+    <!--HEADER-->
+    <header>
+      <!--NAVBAR-->
+      <nav class="nav_main">
+        <!--NAVBAR MENU-->
+        <div class="nav_menu">
+          <a href="/">
+            <img src="../assets/img/dark_logo.png" alt="dark_logo">
+          </a>
+          <ul>
+            <!-- <li><a href="#" class="flexitem">Hombre <i class="ri-arrow-drop-down-line"></i></a></li> -->
+            <!-- <li><a href="#" class="flexitem">Mujer <i class="ri-arrow-drop-down-line"></i></a></li> -->
+            <li> <a href="productos.html"> Productos </a></li>
+            <li> <a href="nosotros.html">Nosotros</a></li>
+            <li>Ofertas</li>
+            <li></li>
+          </ul>
+        </div>
+        <!--NAVBAR OPTIONS-->
+        <div class="nav_options">
+          <!--Search-->
+          <div class="search">
+            <button><i class="ri-search-line"></i></button>
+            <input type="text" placeholder="Buscar..." />
+          </div>
+          <!--Shopping Cart-->
+          <button class="cart relative">
+            <span class="absolute px-1.5 left-3 -top-2 bg-red-500 text-xs rounded-full">1</span>
+              <i onclick="showCart(this)" class="ri-shopping-cart-2-fill"></i>            
+          </button>
+          <!--Favorites-->
+          <button class="favorites"><i class="ri-heart-fill"></i></button>
+          <!--Theme-->
+          <button class="theme">
+            <!--Dark-->
+            <i class="ri-moon-fill"></i>
+            <!--Light-->
+            <!--<i class="ri-sun-fill"></i>-->
+          </button>
+          <!--Menu-->
+          <button class="menu">
+            <i class="ri-menu-3-fill"></i>
+          </button>
+          <button id="buttonlogin" class="user" >
+            <!-- <a href="./pages/loginPage/login.html"></a> -->
+            <i class="ri-user-fill"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    
+
+    
+    <!--MAIN-->
+    <main>
+      <!--BRANDS-->
+      <section class="brands">
+        <div class="slider_brands">
+          <div class="slide_track">
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/adidas.png" alt="brand_adidas">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/nike.png" alt="brand_nike">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/converse.png" alt="brand_converse">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/vans.png" alt="brand_vans">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/umbro.png" alt="brand_umbro">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/dc.png" alt="brand_dc">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/everlast.png" alt="brand_everlast">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/puma.png" alt="brand_puma">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/rebook.png" alt="brand_rebook">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/adidas.png" alt="brand_adidas">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/nike.png" alt="brand_nike">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/converse.png" alt="brand_converse">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/vans.png" alt="brand_vans">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/umbro.png" alt="brand_umbro">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/dc.png" alt="brand_dc">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/everlast.png" alt="brand_everlast">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/puma.png" alt="brand_puma">
+            </div>
+            <div class="brand_slide">
+              <img src="../assets/img/marcas/rebook.png" alt="brand_rebook">
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <!--Shopping Cart-->
+        
+        <div class="cart-products" id="products-id">
+          <p class="close-btn" onclick="closeBtn()">X</p>
+          <h3 style="margin-top: 20px; margin-bottom: 20px;"> Mi carrito</h3>
+          <div class="card-items">            
+          </div>
+          <h2 style="margin-top: 20px; margin-bottom: 20px;">Total: S/.<strong class="price-total">0</strong></h2>
+          <button type="submit">Pagar</button>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <!--HEADER2-->
+  <header class="h_zapatillas">
+    <h1>ZAPATILLAS ADIDAS HOMBRE</h1>
+  </header>
+  <!--PRODUCTS-->
+  <div class="container-items">
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img src="../assets/img/productos/ADIDAS/ADIDAS MEN/FORUM 84 LOW SHOES/FORUM 84 LOW SHOES.jpg" alt="producto">
+        </figure>
+        <h2 class="title">FORUM 84 LOW SHOES</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">199</b></b>
+        <a href="" data-id="1" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img src="../assets/img/productos/ADIDAS/ADIDAS MEN/RACER TR21 SHOES/RACER TR21 SHOES.jpg" alt="producto">
+        </figure>
+        <h2 class="title">RACER TR21 SHOES</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">299</b></b>
+        <a href="" data-id="2" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img src="../assets/img/productos/ADIDAS/ADIDAS MEN/SWIFT RUN SHOES/SWIFT RUN SHOES.jpg" alt="producto">
+        </figure>
+        <h2 class="title">SWIFT RUN SHOES</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">259</b></b>
+        <a href="" data-id="3" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img src="../assets/img/productos/ADIDAS/ADIDAS MEN/ULTRA 4DFWD SHOES/ULTRA 4DFWD SHOES.jpg" alt="producto">
+        </figure>
+        <h2 class="title">ULTRA 4DFWD SHOES</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">329</b></b>
+        <a href="" data-id="4" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img src="../assets/img/productos/ADIDAS/ADIDAS MEN/ULTRABOOST 22 SHOES/ULTRABOOST 22 SHOES.jpg" alt="producto">
+        </figure>
+        <h2 class="title">ULTRABOOST 22 SHOES</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">429</b></b>
+        <a href="" data-id="5" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+  </div>
+
+     
+    </main>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Nosotros</h4>
+            <ul>
+              <li><a href="#">Sobre nosotros</a></li>
+              <li><a href="#">nuestros servicios</a></li>
+              <li><a href="#">politicas de privacidad</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">envios</a></li>
+              <li><a href="#">devoluciones</a></li>
+              <li><a href="#">opciones de pago</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Tienda online</h4>
+            <ul>
+              <li><a href="#">Ver</a></li>
+              <li><a href="#">carrito</a></li>
+              <li><a href="#">zapatillas</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>siguenos</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/snks___shop/"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="px-10 py-5 flex justify-center">
+      <div class="max-w-[1480px] w-full flex justify-between">
+        <div class="flex gap-5">
+          <p>&copy; 2022 Sneakers,</p>
+          <p>Todos los derechos reservados</p>
+        </div>
+        <div class="flex gap-5">
+          <p><a class="hover:underline hover:font-semibold" href="#">Términos de privacidad</a> (Actualizada 10/2022)
+          </p>
+          <p><a class="hover:underline hover:font-semibold" href="#">Mapa de sitio</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login">
+    <div>
+      <h3>Login</h3>
+    </div>
+    <div class="form-login">
+      <form action="submit" id="form-box">
+        <label for="">Usuario</label>
+        <input type="text" placeholder="nombre usuario" required>
+        <br>
+        <label for="">Clave</label>
+        <input type="password" placeholder="clave" required>
+        <li>
+          <input type="checkbox" value="Remember me"><label for="Remember me" id="remember">Remember me</label>
+        </li>
+        <br>
+        <input type="submit" value="ingresar">
+      </form>
+    </div>
+
+  <script src="../script.js"></script>
+  
+  <script type="text/javascript" >
+    
+    $("#buttonlogin").click(function(){
+      $("#login").toggle(function(e) {
+          if ($(this).is(":visible")) {
+              $("#login").show();
+              $("#buttonlogin").css('color', 'grey');
+          }
+          else {
+              $("#login").hide(); 
+              $("#buttonlogin").css('color','white');
+          };
+      });
+    });
+
+  </script>
+  <script src="../javascript/promotion.js"></script>
+  <script src="../javascript/carrito.js"></script>
+</body>
+
+</html>

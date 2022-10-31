@@ -157,7 +157,8 @@
           <h2 style="margin-top: 20px; margin-bottom: 20px;">Total: S/.<strong class="price-total" id="price-total">0</strong></h2>
           <script>
             function linkinfopago(){
-              let precio = document.getElementById("price-total").value;
+              let precio = Number(document.getElementById("price-total").outerText);
+              document.getElementsByName("price-total")[0].outerText
               window.location.href="https://jorgitoayala.github.io/Sneakers/pages/infopago/infopago.html?precio="+precio
             }
           </script>

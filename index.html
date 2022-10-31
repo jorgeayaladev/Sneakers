@@ -299,26 +299,25 @@
       <div class="container">
         <div class="row">
           <div class="footer-col">
-            <h4>Nosotros</h4>
+            <h4>Sneakers</h4>
             <ul>
-              <li><a href="#">Sobre nosotros</a></li>
-              <li><a href="#">nuestros servicios</a></li>
+              <li><a href="pages/nosotros.html">Sobre nosotros</a></li>
+              <li><a href="pages/productos.html">Productos</a></li>
+              <li><a href="pages/ofertas.html">Ofertas</a></li>
               <li><a href="pages/TyC.html">Terminos y Condiciones</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>get help</h4>
             <ul>
-              <li><a href="pages/FAQs.html">FAQ</a></li>
-              <li><a href="#">Ayuda</a></li>
+              <li><a href="pages/FAQs.html">FAQ</a></li>              
             </ul>
           </div>
           <div class="footer-col">
             <h4>Tienda online</h4>
             <ul>
-              <li><a href="#">Ver</a></li>
+              <li><a href="index.html">Ver</a></li>
               <li><a href="#">carrito</a></li>
-              <li><a href="#">zapatillas</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -372,16 +371,17 @@
     $("#buttonlogin").click(function(){
       $("#login").toggle(function(e) {
           if ($(this).is(":visible")) {
+              $("#login").css('transform', 'translateX(-350px)')
+              $("#login").css('transition', '3s')
               $("#login").show();
               $("#buttonlogin").css('color', 'grey');
           }
           else {
-              $("#login").hide(); 
+              $("#login").hide();               
               $("#buttonlogin").css('color','white');
           };
       });
     });
-
   </script>
   <script src="./javascript/promotion.js"></script>
 </body>

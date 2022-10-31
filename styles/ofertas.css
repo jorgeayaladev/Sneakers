@@ -2,11 +2,57 @@
 
 
 .ofertas_section {
-  padding: 40px;
+  margin: 0 auto;
+  /* width: 75%; */
   display: flex;
   flex-direction: column;
 }
 
+@media (min-width: 1200px) {
+  .ofertas_section .h_ofertas{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
 .h_ofertas {
-  
+  padding: 15px;
+}
+
+.info-product .price-old {
+  text-decoration:line-through;
+}
+
+.info-product .price {
+  /* color: red; */
+  font-size: 25px;
+}
+.info-product .soles {
+  color: red;
+  font-size: 25px;
+}
+
+.info-product .oferta-ahora {
+  font-size: 21px;
+  font-weight: 700;
+  color: rgb(255, 53, 53);
+}
+
+.item { 
+  position: relative;
+}
+
+.item .dscto {
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px;
+  border-radius: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

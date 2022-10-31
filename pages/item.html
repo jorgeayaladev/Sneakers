@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--TAILWIND CDN-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--REMIX ICON-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <title>Sneakers</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+    * {
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* -------------------------------------- */
+    /* --------------- HEADER --------------- */
+    /* -------------------------------------- */
+
+    header {
+      display: flex;
+      justify-content: center;
+      background-color: black;
+    }
+
+    /* ---- NAVBAR ---- */
+    .nav_main {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+      max-width: 1480px;
+      width: 100%;
+    }
+
+    .nav_menu {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .nav_menu a img {
+      width: 5rem;
+    }
+
+    .nav_menu ul {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      color: white;
+    }
+
+    .nav_options {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      color: white;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    .nav_options .search {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .nav_options .search button {
+      position: absolute;
+      left: 0.5rem;
+    }
+
+    .nav_options .search input {
+      background-color: black;
+      border-radius: 30px;
+      border: 1px solid;
+      padding: 0.2rem 2rem;
+      font-size: 1rem;
+    }
+
+    .nav_options .menu {
+      display: none;
+    }
+
+    @media only screen and (max-width: 780px) {
+
+      .nav_options .favorites,
+      .nav_options .theme {
+        display: none;
+      }
+
+      .nav_menu {
+        font-size: 10pt;
+      }
+
+      .nav_menu a {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav_menu a img {
+        width: 4rem;
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .nav_options .search {
+        display: none;
+      }
+    }
+
+    /* -------------------------------------- */
+    /* --------------- FOOTER --------------- */
+    /* -------------------------------------- */
+
+    .container {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .footer {
+      background-color: #24262b;
+      padding: 70px 0;
+    }
+
+    .footer-col {
+      width: 25%;
+      padding: 2.5rem;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .footer-col h4::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #fdfcfc;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: #ffffff;
+      padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #24262b;
+      background-color: #ffffff;
+    }
+
+    /*responsive*/
+    @media (max-width: 767px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 574px) {
+      .footer-col {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--HEADER-->
+  <header>
+    <!--NAVBAR-->
+    <nav class="nav_main">
+      <!--NAVBAR MENU-->
+      <div class="nav_menu">
+        <a href="/">
+          <img src="../assets/img/dark_logo.png" alt="dark_logo">
+        </a>
+        <ul>
+          <!-- <li><a href="#" class="flexitem">Hombre <i class="ri-arrow-drop-down-line"></i></a></li> -->
+          <!-- <li><a href="#" class="flexitem">Mujer <i class="ri-arrow-drop-down-line"></i></a></li> -->
+          <li> <a href="./pages/productos.html">Productos</a></li>
+          <li> <a href="./pages/nosotros.html">Nosotros</a></li>
+          <li> <a href="./pages/ofertas.html">Ofertas</a></li>
+          <li></li>
+        </ul>
+      </div>
+      <!--NAVBAR OPTIONS-->
+      <div class="nav_options">
+        <!--Search-->
+        <div class="search">
+          <button><i class="ri-search-line"></i></button>
+          <input type="text" placeholder="Buscar..." />
+        </div>
+        <!--Shopping Cart-->
+        <button class="cart relative">
+          <span id="count-prod" class="absolute px-1.5 left-3 -top-2 bg-red-500 text-xs rounded-full">0</span>
+          <i onclick="showCart(this)" class="ri-shopping-cart-2-fill"></i>
+        </button>
+        <!--Favorites-->
+        <button class="favorites"><i class="ri-heart-fill"></i></button>
+        <!--Theme-->
+        <button class="theme">
+          <!--Dark-->
+          <i class="ri-moon-fill"></i>
+          <!--Light-->
+          <!--<i class="ri-sun-fill"></i>-->
+        </button>
+        <button id="buttonlogin" class="user">
+          <!-- <a href="./pages/loginPage/login.html"></a> -->
+          <i class="ri-user-fill"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main class="bg-gray-50">
+    <div class="p-5 flex justify-center">
+      <div class="max-w-[1280px] w-full grid grid-cols-1 lg:grid-cols-2 gap-1">
+        <!--STORE DETAILS-->
+        <section class="p-10 flex justify-center items-center bg-white shadow rounded-lg">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-5 sm:gap-10 lg:gap-5">
+            <!--FIRST PART - SHOPPING DETAILS-->
+            <div>
+              <div class="w-full flex justify-start lg:justify-end items-center gap-2">
+                <div>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-s-fill"></i>
+                  <i class="ri-star-half-s-fill"></i>
+                </div>
+                <a class="hover:font-semibold underline" href="#">671 reviews</a>
+              </div>
+              <h1 class="mt-4 text-2xl text-center font-bold">
+                ZAPATILLAS ULTRABOOST 2022
+              </h1>
+              <p class="mt-2 italic text-center">
+                Acelera en tu pasión atlética
+              </p>
+              <div class="mt-5 px-5 py-1 flex items-center justify-center rounded-lg shadow">
+                <img src="https://www.adidas.pe/glass/react/b301fe9/assets/img/icon-adidas-logo.svg" alt="adidas">
+                <p class="ml-1 text-xl font-bold">Adidas</p>
+                <p class="hidden lg:block ml-5">Marca registrada</p>
+              </div>
+              <p class="mt-7 text-3xl text-right font-bold italic">
+                S/. 120.00
+              </p>
+            </div>
+            <!--SECOND PART - SHOPPING DETAILS-->
+            <div>
+              <!--SIZES SNEAKERS-->
+              <div class="flex flex-col gap-4">
+                <h2 class="text-xl font-semibold">Elige tu talla</h2>
+                <div class="grid grid-cols-4 gap-1 text-sm">
+                  <div
+                    class="px-2 py-1 bg-white hover:bg-gray-800 hover:text-white text-center border border-gray-800 cursor-pointer">
+                    32</div>
+                  <div
+                    class="px-2 py-1 bg-white hover:bg-gray-800 hover:text-white text-center border border-gray-800 cursor-pointer">
+                    35</div>
+                  <div
+                    class="px-2 py-1 bg-white hover:bg-gray-800 hover:text-white text-center border border-gray-800 cursor-pointer">
+                    37</div>
+                  <div
+                    class="px-2 py-1 bg-white hover:bg-gray-800 hover:text-white text-center border border-gray-800 cursor-pointer">
+                    40</div>
+                  <div
+                    class="px-2 py-1 bg-white hover:bg-gray-800 hover:text-white text-center border border-gray-800 cursor-pointer">
+                    42</div>
+                </div>
+              </div>
+              <!--ACTION BUTTONS-->
+              <div class="mt-4 flex items-center gap-1">
+                <button
+                  class="w-full px-5 py-2 flex items-center gap-2 hover:bg-gray-800 hover:text-white border border-gray-800 rounded-lg">
+                  <i class="ri-shopping-cart-fill"></i>
+                  <p class="text-sm">Añádelo a tu carrito</p>
+                </button>
+                <button
+                  class="block sm:hidden md:block px-5 py-2 flex items-center hover:bg-gray-800 hover:text-white border border-gray-800 rounded-lg">
+                  <i class="text-sm ri-heart-3-fill"></i>
+                </button>
+              </div>
+              <!--ADVANTAGES-->
+              <div class="mt-2 flex flex-col gap-0.5">
+                <div class="px-5 py-2 flex items-center gap-2 shadow rounded-lg">
+                  <i class="ri-truck-fill"></i>
+                  <p class="text-sm" href="#">
+                    Envíos 100% gratis para miembros!
+                  </p>
+                </div>
+                <div class="px-5 py-2 flex items-center gap-2 shadow rounded-lg">
+                  <i class="ri-lock-fill"></i>
+                  <p class="text-sm" href="#">
+                    Paga seguro en línea!
+                  </p>
+                </div>
+                <div class="px-5 py-2 flex items-center gap-2 shadow rounded-lg">
+                  <i class="ri-refund-fill"></i>
+                  <p class="text-sm" href="#">
+                    Puedes devolverlo en un plazo de 60 días
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--IMAGE DETAILS-->
+        <section class="flex items-center justify-center bg-white shadow rounded-lg">
+          <div class="p-10 grid grid-cols-4 gap-2">
+            <div class="col-span-4 row-span-1 sm:col-span-2 sm:row-span-2 lg:col-span-4 lg:row-span-1">
+              <img class="rounded-lg shadow"
+                src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b6b6fea7827b42f7bddeadab00ff7299_9366/Zapatillas_Ultraboost_22_Azul_GX5461_01_standard.jpg"
+                alt="main_img">
+            </div>
+            <div class="brightness-100 hover:brightness-75 cursor-pointer">
+              <img class="rounded-lg shadow"
+                src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4f7fd63cd90c44fe9de2adab00ff84fd_9366/Zapatillas_Ultraboost_22_Azul_GX5461_02_standard_hover.jpg"
+                alt="img_1">
+            </div>
+            <div class="brightness-100 hover:brightness-75 cursor-pointer">
+              <img class="rounded-lg shadow"
+                src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/6d7d6532d86941a99baeadab00ff8dbe_9366/Zapatillas_Ultraboost_22_Azul_GX5461_03_standard.jpg"
+                alt="img_2">
+            </div>
+            <div class="brightness-100 hover:brightness-75 cursor-pointer">
+              <img class="rounded-lg shadow"
+                src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/54b0042dfcff46be86deadab00ffc205_9366/Zapatillas_Ultraboost_22_Azul_GX5461_09_standard.jpg"
+                alt="img_3">
+            </div>
+            <div class="brightness-100 hover:brightness-75 cursor-pointer">
+              <img class="rounded-lg shadow"
+                src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c5a11184ffda4a26b7acadab00ff9f50_9366/Zapatillas_Ultraboost_22_Azul_GX5461_05_standard.jpg"
+                alt="img_4">
+            </div>
+          </div>
+        </section>
+        <!--SNEAKER STORY COMPILATION-->
+        <section class="p-10 flex justify-center items-center bg-white shadow rounded-lg">
+          <div>
+            <div class="px-7 py-2 flex items-center justify-between bg-gray-800 text-white rounded-lg">
+              <p>Más detalles</p>
+              <button type="button">
+                <i class="text-3xl ri-arrow-drop-down-fill"></i>
+              </button>
+            </div>
+            <div class="mt-5">
+              <h2 class="text-2xl font-bold italic">
+                La energía evoluciona
+              </h2>
+              <div class="mt-5">
+                <img class="ml-5 mb-1 w-[50%] sm:w-[30%] md:w-[20%] lg:w-[40%] float-right rounded-lg"
+                  src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0c194f8cd21942e6848eadab00ff9552_9366/Zapatillas_Ultraboost_22_Azul_GX5461_04_standard.jpg"
+                  alt="img_5">
+                <p class="sm:text-justify">
+                  Disfruta de una comodidad y respuesta increíbles con estas zapatillas de running <b>Ultraboost</b>.
+                  Presentan
+                  una mediasuela <b>BOOST</b> que te proporciona un retorno de energía sin límites, un sistema <i>Linear
+                    Energy
+                    Push</i> y una suela con compuesto de caucho <b>Continental™</b>. Estas zapatillas presentan una
+                  parte
+                  superior fabricada con un hilo
+                  reciclado de alto rendimiento creado con al menos un 50% de <b>Parley Ocean Plastic</b> — un material
+                  reinventado a partir de residuos plásticos recogidos en zonas costeras para evitar que contaminen
+                  nuestros océanos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--MATERIALS FROM SNEAKERS-->
+        <section class="p-10 flex bg-white shadow rounded-lg">
+          <div>
+            <div class="px-7 py-2 flex items-center justify-between bg-gray-800 text-white rounded-lg">
+              <p>Composición del producto</p>
+              <button type="button">
+                <i class="text-3xl ri-arrow-drop-down-fill"></i>
+              </button>
+            </div>
+            <div class="mt-5">
+              <h2 class="text-left text-2xl font-bold italic">
+                Composición
+              </h2>
+              <ul class="mt-5 mx-5 list-disc">
+                <li>Horma clásica</li>
+                <li>Cierre de cordones</li>
+                <li>Parte superior de tejido adidas PRIMEKNIT</li>
+                <li>Ajuste suave en el talón</li>
+                <li>Sistema Linear Energy Push</li>
+                <li>Mediasuela BOOST</li>
+                <li>Color del artículo: Collegiate Navy / Collegiate Navy / Core Black</li>
+                <li>Número de artículo: GX5461</li>
+              </ul>
+              <img class="mt-5 rounded-lg"
+                src="https://en.bloomingdales.com.kw/on/demandware.static/-/Library-Sites-BloomingDalesSharedLibrary/default/dw69be0108/FINAL-IMAGES/BRAND-HEADERS/desktop-brand/adidas.jpg"
+                alt="banner_adidas">
+            </div>
+          </div>
+        </section>
+        <!--MERCHANDISING-->
+        <section class="col-span-1 lg:col-span-2 p-10 flex justify-center items-center bg-white shadow rounded-lg">
+          <div class="w-full">
+            <h2 class="text-2xl font-bold">Otros usuarios también eligieron:</h2>
+            <div class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div class="p-3 shadow-lg rounded">
+                <div class="w-full relative">
+                  <img class="w-full rounded"
+                    src="https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/87768e212e034ff78d6dad6700b3eee2_9366/GW8347_01_standard.jpg"
+                    alt="primer_producto">
+                  <div class="absolute px-2 py-1 bg-yellow-100 right-2 bottom-2">
+                    <p class="text-sm">S/. 99.00</p>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <h4 class="text-sm font-semibold">
+                    Zapatillas Duramo SL 2.0
+                  </h4>
+                  <h5 class="mt-2 text-xs">Performance</h5>
+                </div>
+              </div>
+              <div class="p-3 shadow-lg rounded">
+                <div class="w-full relative">
+                  <img class="w-full rounded"
+                    src="https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/dcd8c0f0ee1d4fdab45aac0200b20173_9366/FX4576_01_standard.jpg"
+                    alt="primer_producto">
+                  <div class="absolute px-2 py-1 bg-yellow-100 right-2 bottom-2">
+                    <p class="text-sm">S/. 129.00</p>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <h4 class="text-sm font-semibold">
+                    Zapatillas Senderismo
+                  </h4>
+                  <h5 class="mt-2 text-xs">Terrex</h5>
+                </div>
+              </div>
+              <div class="p-3 shadow-lg rounded">
+                <div class="w-full relative">
+                  <img class="w-full rounded"
+                    src="https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/10def38d362d45cc827fae890000d37f_9366/GV9554_01_standard.jpg"
+                    alt="primer_producto">
+                  <div class="absolute px-2 py-1 bg-yellow-100 right-2 bottom-2">
+                    <p class="text-sm">S/. 139.00</p>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <h4 class="text-sm font-semibold">
+                    Mistury Falcon Sneakers
+                  </h4>
+                  <h5 class="mt-2 text-xs">Performance</h5>
+                </div>
+              </div>
+              <div class="p-3 shadow-lg rounded">
+                <div class="w-full relative">
+                  <img class="w-full rounded"
+                    src="https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/643a8844d26a446c86e5acb800b3dfe6_9366/GV7125_01_standard.jpg"
+                    alt="primer_producto">
+                  <div class="absolute px-2 py-1 bg-yellow-100 right-2 bottom-2">
+                    <p class="text-sm">S/. 89.00</p>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <h4 class="text-sm font-semibold">
+                    Zapatillas Galaxar
+                  </h4>
+                  <h5 class="mt-2 text-xs">Sportswear</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--COMMENTS-->
+        <section class="col-span-1 lg:col-span-2 p-10 flex justify-center items-center bg-white shadow rounded-lg">
+          <div>
+            <div>
+              <h2 class="text-2xl font-bold">Comentarios</h2>
+              <!--FIRST COMMENT-->
+              <div class="mt-5 flex justify-between gap-5">
+                <div>
+                  <img class="w-24 rounded-full"
+                    src="https://scontent.flim29-1.fna.fbcdn.net/v/t39.30808-1/291948117_2839722942988890_7208549863218079436_n.jpg?stp=dst-jpg_s320x320&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=l_hjKj9CzscAX8mO6sZ&_nc_ht=scontent.flim29-1.fna&oh=00_AfBQQlaq6p5gXyeJSxHQ-xhZ6JMB4kFHCn7BCufDBhIkgw&oe=6363C796"
+                    alt="primera_persona">
+                </div>
+                <div class="">
+                  <small>Maria Fernanda de las Casas comenta:</small>
+                  <h2 class="font-bold">Me encantó el ultraboost!</h2>
+                  <p class="mt-2">Realmente este producto me cambió la vida! Andaba con mis zapatillas de charol y no
+                    habia dinerito
+                    para
+                    algo mejor. Ahora soy una mujer más realizada en la vida.</p>
+                </div>
+              </div>
+              <!--SECOND COMMENT-->
+              <div class="mt-5 flex justify-between gap-5">
+                <div>
+                  <img class="w-24 rounded-full"
+                    src="https://scontent.flim29-1.fna.fbcdn.net/v/t39.30808-1/283720414_2793225024318630_3962090555009445687_n.jpg?stp=c0.0.320.320a_dst-jpg_p320x320&_nc_cat=109&ccb=1-7&_nc_sid=7206a8&_nc_ohc=bKT--Bau4UEAX_FWkoN&tn=za91C-eoW1TaIspv&_nc_ht=scontent.flim29-1.fna&oh=00_AfDl59SBqBkTChOlXpnVjLu8fkGzgwaCXIddTOH_IZQWjA&oe=636518D6"
+                    alt="segunda_persona">
+                </div>
+                <div class="">
+                  <small>Carlitos comenta:</small>
+                  <h2 class="font-bold">Ahora soy fitness!</h2>
+                  <p class="mt-2">Soy una persona fitness y me encanta el running bastante. Ahora le voy a presumir a
+                    mis
+                    amigos que tengo una adidas de calidad, me van a dejar de decir pobre.</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-7">
+              <h3 class="font-semibold">
+                Hola Ricardo! Coméntanos que opinas sobre este producto..
+              </h3>
+              <div class="mt-5 flex justify-between gap-5">
+                <div class="w-24">
+                  <img class="w-24 rounded-full"
+                    src="https://scontent.flim29-1.fna.fbcdn.net/v/t39.30808-1/264840289_4714892815246340_1517960025212712747_n.jpg?stp=dst-jpg_p320x320&_nc_cat=106&ccb=1-7&_nc_sid=7206a8&_nc_ohc=tuleDN7L3y4AX_guOZ7&_nc_ht=scontent.flim29-1.fna&oh=00_AfBxNyLM3sKrI1g970wRIYEWEZX1VH0x458ZYZfrOQ-ujg&oe=6363F432"
+                    alt="persona main">
+                </div>
+                <form class="w-full flex flex-col gap-2">
+                  <input class="w-full border border-black px-5 py-2 rounded gap-2" type="text" name="asunto"
+                    placeholder="Titulo" />
+                  <textarea class="w-full border border-black px-5 py-2 rounded gap-2" type="text" name="comment"
+                    placeholder="Coméntanos"></textarea>
+                  <button class="px-4 py-2 bg-gray-800 text-white rounded" type="submit">Enviar mensaje</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Nosotros</h4>
+          <ul>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">nuestros servicios</a></li>
+            <li><a href="pages/TyC.html">Terminos y Condiciones</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="pages/FAQs.html">FAQ</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tienda online</h4>
+          <ul>
+            <li><a href="#">Ver</a></li>
+            <li><a href="#">carrito</a></li>
+            <li><a href="#">zapatillas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>siguenos</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/snks___shop/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="px-10 py-5 flex justify-center">
+    <div class="max-w-[1480px] w-full flex justify-between">
+      <div class="flex gap-5">
+        <p>&copy; 2022 Sneakers,</p>
+        <p>Todos los derechos reservados</p>
+      </div>
+      <div class="flex gap-5">
+        <p><a class="hover:underline hover:font-semibold" href="#">Términos de privacidad</a> (Actualizada 10/2022)
+        </p>
+        <p><a class="hover:underline hover:font-semibold" href="#">Mapa de sitio</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $("#buttonlogin").click(function () {
+      $("#login").toggle(function (e) {
+        if ($(this).is(":visible")) {
+          $("#login").show();
+          $("#buttonlogin").css('color', 'grey');
+        }
+        else {
+          $("#login").hide();
+          $("#buttonlogin").css('color', 'white');
+        };
+      });
+    });
+  </script>
+</body>
+
+</html>

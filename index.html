@@ -36,14 +36,14 @@
         <!--NAVBAR MENU-->
         <div class="nav_menu">
           <a href="/">
-            <img src="assets/img/dark_logo.png" alt="dark_logo">
+            <img src="../assets/img/dark_logo.png" alt="dark_logo">
           </a>
           <ul>
             <!-- <li><a href="#" class="flexitem">Hombre <i class="ri-arrow-drop-down-line"></i></a></li> -->
             <!-- <li><a href="#" class="flexitem">Mujer <i class="ri-arrow-drop-down-line"></i></a></li> -->
-            <li> <a href="pages/productos.html"> Productos </a></li>
-            <li> <a href="pages/nosotros.html">Nosotros</a></li>
-            <li>Ofertas</li>
+            <li> <a href="./pages/productos.html">Productos</a></li>
+            <li> <a href="./pages/nosotros.html">Nosotros</a></li>
+            <li> <a href="./pages/ofertas.html">Ofertas</a></li>
             <li></li>
           </ul>
         </div>
@@ -56,8 +56,8 @@
           </div>
           <!--Shopping Cart-->
           <button class="cart relative">
-            <span class="absolute px-1.5 left-3 -top-2 bg-red-500 text-xs rounded-full">1</span>
-            <i class="ri-shopping-cart-2-fill"></i>
+            <span id="count-prod" class="absolute px-1.5 left-3 -top-2 bg-red-500 text-xs rounded-full">0</span>
+              <i onclick="showCart(this)" class="ri-shopping-cart-2-fill"></i>            
           </button>
           <!--Favorites-->
           <button class="favorites"><i class="ri-heart-fill"></i></button>
@@ -79,6 +79,7 @@
         </div>
       </nav>
     </header>
+
 
     
 
@@ -146,6 +147,15 @@
           </div>
         </div>
       </section>
+
+      <div class="cart-products" id="products-id">
+        <p class="close-btn" onclick="closeBtn()">X</p>
+        <h3 style="margin-top: 20px; margin-bottom: 20px;"> Mi carrito</h3>
+        <div class="card-items">            
+        </div>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">Total: S/.<strong class="price-total">0</strong></h2>
+        <button type="submit">Pagar</button>
+      </div>
 
       <!--BANNER-->
       <section class="banner">

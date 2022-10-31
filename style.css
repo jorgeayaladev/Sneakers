@@ -24,6 +24,12 @@
 /*Productos */
 @import url("./styles/productos.css");
 
+/*Carousel*/
+@import url("./styles/carousel.css");
+
+/*Ofertas*/
+@import url("./styles/ofertas.css");
+
 /*NavBar*/
 .flexitem {
   display: flex;

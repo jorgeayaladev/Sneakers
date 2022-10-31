@@ -15,7 +15,7 @@
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
   crossorigin="anonymous">    
   </script>
-    <title>Nosotros</title>
+    <title>Sneakers</title>
 </head>
 
 <body>
@@ -40,9 +40,9 @@
           <ul>
             <!-- <li><a href="#" class="flexitem">Hombre <i class="ri-arrow-drop-down-line"></i></a></li> -->
             <!-- <li><a href="#" class="flexitem">Mujer <i class="ri-arrow-drop-down-line"></i></a></li> -->
-            <li> <a href="productos.html"> Productos </a></li>
+            <li> <a href="productos.html">Productos</a></li>
             <li> <a href="nosotros.html">Nosotros</a></li>
-            <li>Ofertas</li>
+            <li> <a href="ofertas.html">Ofertas</a></li>
             <li></li>
           </ul>
         </div>
@@ -55,8 +55,8 @@
           </div>
           <!--Shopping Cart-->
           <button class="cart relative">
-            <span class="absolute px-1.5 left-3 -top-2 bg-red-500 text-xs rounded-full">1</span>
-            <i class="ri-shopping-cart-2-fill"></i>
+            <span id="count-prod" class="absolute px-1.5 left-3 -top-2 bg-red-500 text-xs rounded-full">0</span>
+              <i onclick="showCart(this)" class="ri-shopping-cart-2-fill"></i>            
           </button>
           <!--Favorites-->
           <button class="favorites"><i class="ri-heart-fill"></i></button>
@@ -97,9 +97,9 @@
         </div>
         <!--<div class="seccion-pricipal" style="display:grid; grid-template-columns: auto auto auto; margin-bottom: 80px; justify-items:center">-->
         <div class="seccion-pricipal">
-            <img src="assets/img/categories/cat_hombre.png" alt="">
-            <img src="assets/img/categories/cat_mujer.png" alt="">
-            <img src="assets/img/categories/cat_nino.png" alt="">  
+            <img src="../assets/img/categories/cat_hombre.png" alt="">
+            <img src="../assets/img/categories/cat_mujer.png" alt="">
+            <img src="../assets/img/categories/cat_nino.png" alt="">  
         </div>
         <div class="seccion-pricipal-bottom">
             <div class="bottom" >
@@ -143,24 +143,17 @@
             <div class="seccion-secundaria-main">
                 <div class="main">
                     <h3>
-                        Hecho con la mejor calidad de produccion
+                        Hecho con el mejor equipo de Desarrolladores
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. . Voluptate quos consequuntur officia, dolor suscipit optio saepe vitae labore rem amet.
+                        Somos un equipo de emprendedores que busca dar la mejor calidad de productos en zapatillas 
+                        para todos sus clientes al mejor precio y con las ultimas novedades.
                     </p>
                     <br>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio dolores ab mollitia delectus vero est doloremque nesciunt illum. Voluptate quos consequuntur officia, dolor suscipit optio saepe vitae labore rem amet.
-                    </p>
-                    <br>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio dolores ab mollitia delectus vero est doloremque nesciunt illum.
-                    <p>
-                        firma
-                    </p>
+                    
                 </div>
                 <div class="main-img">
-                    <img src="assets/img/categories/cat_men.png" alt="">
+                    <img src="../assets/img/gatos/team.jpeg" alt="">
                 </div>
             </div>
         </div>
@@ -172,47 +165,65 @@
     <div class="secciones">
         <div class="secciones-titulos">
             <i class="ri-user-2-line"></i>
-            <h3 style="margin-left: 10px"> Fundadores</h3>
+            <h3 style="margin-left: 10px"> Creadores</h3>            
         </div>
         <div class="seccion-final-titulo">
             <!--<h2>Hechos con la mejor calidad de produccion</h2>-->
-            <h2>Creamos esta empresa con el objetivo de ser los mejores</h2>
+            <h2>Equipo Gatitos informaticos</h2>
         </div>
-        <div class="seccion-final-texto">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quo corporis sapiente cum ex architecto sint expedita odit eveniet aperiam alias rerum molestias culpa, in voluptatem corrupti laborum ab sed.
-            </p>
-        </div>
-
+       
         <div class="seccion-final-cards">
             <div class="card">
                 <!--<div style="width: 50%; max-width: 450px; min-width: 200px"> -->
                 <div class="card-img">
-                    <img src="assets/img/collections/col_skate.png" alt="">
+                    <img src="../assets/img/gatos/gato5.jpeg" alt="">
                 </div>
                 <div class="card-text">
                     <h2>Jhordie Roque</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, sapiente? Quae aut doloribus aliquam dignissimos voluptate quam deserunt quos sit, animi alias dolorum beatae, quia neque impedit mollitia similique cumque.</p>
+                    <b>Gato FullStack Nro 1</b>
+                    <p>Desarrollo <br> Nosotros <br> Formulario Pago </p>
                 </div>
             </div>
             
             <div class="card reverse">
                 <div class="card-text">
-                    <h2>Jhordie Roque</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, sapiente? Quae aut doloribus aliquam dignissimos voluptate quam deserunt quos sit, animi alias dolorum beatae, quia neque impedit mollitia similique cumque.</p>
+                    <h2>Francois Palomino </h2>
+                    <b>Gato FullStack Nro 2</b>
+                    <p>Desarrollo <br> Footer <br> Terminos y Cond. <br> FAQ <br>  </p>
                 </div>
                 <div class="card-img">
-                    <img src="assets/img/collections/col_soccer.png" alt="">
+                    <img src="../assets/img/gatos/gato1.jpeg" alt="">
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-img">
-                    <img src="assets/img/collections/col_running.png" alt="">
+                    <img src="../assets/img/gatos/gato2.jpeg" alt="">
                 </div>
                 <div class="card-text">
-                    <h2>Jhordie Roque</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, sapiente? Quae aut doloribus aliquam dignissimos voluptate quam deserunt quos sit, animi alias dolorum beatae, quia neque impedit mollitia similique cumque.</p>
+                    <h2>Darwin Yovera</h2>
+                    <b>Gato FullStack Nro 3</b>
+                    <p>Desarrollo <br> Productos <br> Carrito </p>
+                </div>
+            </div>
+            <div class="card reverse">                
+                <div class="card-text">
+                    <h2>Jorge Ayala</h2>
+                    <b>Gato FullStack Nro 4</b>
+                    <p>Desarrollo <br> Header Nav <br> Pagina Principal <br> </p>
+                </div>
+                <div class="card-img">
+                  <img src="../assets/img/gatos/gato3.jpeg" alt="">
+              </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="../assets/img/gatos/gato4.jpeg" alt="">
+                </div>
+                <div class="card-text">
+                    <h2>Luis Villavicencio</h2>
+                    <b>Gato FullStack Nro 5</b>
+                    <p>Desarrollo <br>  Login <br> Ofertas </p>
                 </div>
             </div>
         </div>
@@ -310,6 +321,7 @@ $("#buttonlogin").click(function(){
 });
 
 </script>
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 <script src="../javascript/promotion.js"></script>
 <script src="../javascript/nosotros.js"></script>
 </body>

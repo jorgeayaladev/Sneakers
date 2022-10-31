@@ -297,7 +297,7 @@
       <input type="checkbox" value="Remember me"><label for="Remember me" id="remember">Remember me</label>
     </li>
     <br>
-    <input type="submit" value="ingresar">
+    <input id="btnlogin" type="submit" value="ingresar">
   </form>
 </div>
 
@@ -317,6 +317,10 @@ $("#buttonlogin").click(function(){
       };
   });
 });
+$("#btnlogin").click(function(){
+    $("#login").hide();
+    $("#buttonlogin").css('color','white');
+  })   
 
 </script>
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>

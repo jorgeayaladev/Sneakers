@@ -63,7 +63,7 @@ function cambiarSecciones(){
             formpagar.style.display = "none";
             titulo.innerText = "Direccion de envio";
             pagartxt.innerHTML = "<i class='ri-bank-card-line'></i>Proceder al pago";
-            document.getElementById("botonRegresar").innerHTML = `<i class='ri-arrow-left-s-line'></i><a onclick='window.location.href="index.html"' id='regresar'>Regresar</a>`;
+            document.getElementById("botonRegresar").innerHTML = `<i class='ri-arrow-left-s-line'></i><a onclick='window.location.href="https://jorgitoayala.github.io/Sneakers/index.html"' id='regresar'>Regresar</a>`;
         })
     }
 }

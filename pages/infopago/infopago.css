@@ -1,0 +1,292 @@
+section{
+    width: 100%; 
+    display: flex;  
+    justify-content:center
+}
+.seccion-container{
+    width: 80%; 
+    padding: 80px 40px;
+}
+.seccion-titulo{
+    text-align:center; 
+    margin:30px 0px; 
+    font-size: 32px; 
+    font-weight: bold;
+}
+.seccion-formulario{
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 30px;
+    transition: height 2s;
+}
+.titulo-formulario{
+    padding: 20px; 
+    margin: 0 20px;
+    animation: opacidad;
+    animation-duration: 2s;
+    transition: width 2s;
+}
+.titulo-formulario p{
+    font-style:italic;
+}
+/*formulario pagar*/
+.formulario-pagar{
+    padding: 20px; 
+    margin: 0 20px;
+    animation: opacidad;
+    animation-duration: 2s;
+    transition: width 2s;
+}
+
+
+.inputs-formulario{
+    margin: 20px 0px; 
+    width: 100%
+}
+.inputs-formulario input{
+    border: 1px solid #b9b9b9; 
+    width: 100% ; 
+    border-radius: 30px; 
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 40px;
+ 
+}
+.inputs-formulario div{
+    display: flex; 
+    /*margin-bottom: 30px; */
+    justify-content: space-between;
+}
+.inputs-formulario .seleccion-checkbox{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.inputs-formulario .seleccion-checkbox input[type="checkbox"]{
+    width: 3%;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.seleccion-envio h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.seleccion-envio  select{
+    border: 1px solid #b9b9b9; 
+    width: 100% ; 
+    border-radius: 30px; 
+    margin: 10px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 40px;
+}
+/*detalles de compra*/
+.detalles-formulario{
+    padding: 45px 30px;
+    border:1px solid #d3d3d3; 
+    border-radius: 15px; 
+    margin: 0 20px; 
+    max-height: 500px;
+}
+.detalles-titulo{
+    font-size: 28px; 
+    font-weight: bold; 
+    margin-bottom: 25px;
+}
+.detalles-compra{
+    margin-bottom: 20px;
+}
+.detalles-compra div{
+    display: flex; 
+    justify-content:space-between; 
+    margin-bottom: 10px;
+}
+.input-cupon{
+    width: 100%; 
+    position: relative; 
+    margin-bottom: 25px;
+}
+.input-cupon input{
+    margin: 0px;
+    padding: 0px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    width: 100%;
+    outline: none;
+    border: 1px solid #000;
+    height: 30px;
+    border-radius: 15px;
+}
+.input-cupon a{
+    position: absolute;
+    top: 0;
+    border-radius: 0 15px 15px 0;
+    padding: 0 10px;
+    right: 0px;
+    /*z-index: 2;*/
+    border: none;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+    background-color: #000;
+    transform: translateX(2px);
+    align-items: center;
+    display: flex;
+}
+
+.detalle-total{
+    margin-bottom: 20px;
+    margin-top:20px
+}
+.detalle-total div{
+    display: flex; 
+    justify-content:space-between; 
+    margin-bottom: 15px;
+}
+.detalle-total .cupon p{
+    color:#de3131; 
+    font-weight: bold;
+}
+.detalle-total .total p{
+    font-size: 22px; 
+    font-weight:700
+}
+.formulario-buttons{
+    display: flex; 
+    justify-content:space-between; 
+    margin-left: 50px; 
+    width: 55%;
+}
+.formulario-buttons .boton-regresar{
+    display: flex; 
+    align-items: center;
+}
+.formulario-buttons .boton-pago a{
+    padding: 20px 40px; 
+    background-color:#000; 
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.formulario-buttons .boton-pago a i{
+    padding-right: 10px; 
+
+}
+.espacio{
+    margin-top: 50px;
+}
+
+@keyframes opacidad{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.separacion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #d3d3d3;
+}
+.separacion span{
+    width: 180px;
+    height: 2px;
+    background-color: #d3d3d3;
+}
+
+
+
+#modal {
+	left:50%;
+	margin:-450px 0 0 -15%;
+	opacity: 0;
+	position:absolute;
+	top:-50%;
+	visibility: hidden;
+	width:30%;
+	box-shadow:0 3px 7px rgba(0,0,0,.25);
+	box-sizing:border-box;
+	transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+    border-radius: 20px
+}
+#modal:target {
+	opacity: 1;
+	top:50%;
+	visibility: visible;
+    border-radius: 20px
+}
+.modal-content {
+	background: #f7f7f7;
+	position: relative;
+	z-index: 20;
+	border-radius:20px;
+}
+.content{
+    text-align: center;
+}
+.content a{
+    color: #20a200;
+    font-size: 20px;
+    font-weight: bold;
+}
+#modal .copy {
+	background: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#moda .copy img{
+    max-width: 200px;
+}
+#modal img{
+    border-radius: 20px;
+
+
+}
+
+#modal .header {
+	border-bottom: 1px solid #e7e7e7;
+	border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#modal .header h2{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+#modal .header .btn{
+    display: flex;
+    align-self: center;
+    color: red;
+    font-weight: bold;
+}
+#modal .header .btn i{
+    padding-right: 5px;
+}
+#modal .copy,#modal .header {
+	padding:15px;
+    border-radius: 20px;
+}
+#modal .overlay {
+	background-color: #000;
+	background: rgba(0,0,0,.5);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}

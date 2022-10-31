@@ -188,6 +188,16 @@ section{
     }
 }
 
+@media (max-width:450px) {
+    .seccion-formulario{
+        flex-direction: column;
+    }
+    .seccion-container {
+        padding: 80px 0px;
+    }
+}
+
+
 .separacion{
     display: flex;
     justify-content: space-around;

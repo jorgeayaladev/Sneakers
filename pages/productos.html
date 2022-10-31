@@ -155,7 +155,15 @@
           <div class="card-items">            
           </div>
           <h2 style="margin-top: 20px; margin-bottom: 20px;">Total: S/.<strong class="price-total">0</strong></h2>
-          <button type="submit">Pagar</button>
+          <script>
+            function linkinfopago(){
+              let precio = document.getElementById("price-total").value;
+              window.location.href("https://jorgitoayala.github.io/Sneakers/pages/infopago/infopago.html?precio="+precio)
+            }
+          </script>
+          
+          <button type="submit" onclick="linkinfopago()">Pagar</button>
+          
         </div>
 
       </div>

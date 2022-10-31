@@ -1,52 +1,7 @@
-/* @keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
-}
-
-@keyframes tostart {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -300%;
-  }
-  99% {
-    left: 0;
-  }
-}
-
-@keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
-} */
-
 
 * {
   box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-color: transparent transparent; 
   scrollbar-width: 0px;
 }
 
@@ -75,10 +30,10 @@ ol, li {
 
 .carousel {
   position: relative;
-  padding-top: 45%;
+  height: 500px;
   filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
-  max-height: 500px;
+  max-height: max-content;
 }
 
 .carousel__viewport {
@@ -97,15 +52,52 @@ ol, li {
 .carousel__slide {
   position: relative;
   flex: 0 0 100%;
-  /* width: 100%;  
-  max-height: 500px; */
 }
 
 .carousel__slide img {
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
   width: 100%;
-  /* max-height: 500px; */
+  max-height: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    position: relative;
+    /* width: 100%; */
+    height: 400px;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+    max-height: max-content;
+  }
+  .carousel__slide img {
+    object-fit: contain;
+    object-position: top;
+    height: 100%;
+    width: 100%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel {
+    position: relative;
+    /* width: 100%; */
+    height: 350px;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+    max-height: max-content;
+  }
+  .carousel__slide img {
+    object-fit: contain;
+    object-position: top;
+    height: 100%;
+    width: 100%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 
@@ -116,19 +108,6 @@ ol, li {
   width: 100%;
   height: 100%;
   scroll-snap-align: center;
-}
-
-@media (hover: hover) {
-  .carousel__snapper {
-    animation-name: tonext, snap;
-    animation-timing-function: ease;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-  }
-
-  .carousel__slide:last-child .carousel__snapper {
-    animation-name: tostart, snap;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -166,20 +145,4 @@ ol, li {
   font-size: 0;
   transition: transform 0.1s;
 }
-
-/* .carousel::before,
-.carousel::after,
-.carousel__prev,
-.carousel__next {
-  position: absolute;
-  top: 0;
-  margin-top: 37.5%;
-  width: 4rem;
-  height: 4rem;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  font-size: 0;
-  outline: 0;
-} */
-
 

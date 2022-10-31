@@ -15,7 +15,199 @@
         ::-webkit-scrollbar {
             display: none;
         }
-       
+       	/* -------------------------------------- */
+    /* --------------- HEADER --------------- */
+    /* -------------------------------------- */
+
+    header {
+      display: flex;
+      justify-content: center;
+      background-color: black;
+    }
+
+    /* ---- NAVBAR ---- */
+    .nav_main {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+      max-width: 1480px;
+      width: 100%;
+    }
+
+    .nav_menu {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .nav_menu a img {
+      width: 5rem;
+    }
+
+    .nav_menu ul {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      color: white;
+    }
+
+    .nav_options {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      color: white;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    .nav_options .search {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .nav_options .search button {
+      position: absolute;
+      left: 0.5rem;
+    }
+
+    .nav_options .search input {
+      background-color: black;
+      border-radius: 30px;
+      border: 1px solid;
+      padding: 0.2rem 2rem;
+      font-size: 1rem;
+    }
+
+    .nav_options .menu {
+      display: none;
+    }
+
+    @media only screen and (max-width: 780px) {
+
+      .nav_options .favorites,
+      .nav_options .theme {
+        display: none;
+      }
+
+      .nav_menu {
+        font-size: 10pt;
+      }
+
+      .nav_menu a {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav_menu a img {
+        width: 4rem;
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .nav_options .search {
+        display: none;
+      }
+    }
+
+    /* -------------------------------------- */
+    /* --------------- FOOTER --------------- */
+    /* -------------------------------------- */
+
+    .container {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .footer {
+      background-color: #24262b;
+      padding: 70px 0;
+    }
+
+    .footer-col {
+      width: 25%;
+      padding: 2.5rem;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .footer-col h4::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #fdfcfc;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: #ffffff;
+      padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #24262b;
+      background-color: #ffffff;
+    }
+
+    /*responsive*/
+    @media (max-width: 767px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 574px) {
+      .footer-col {
+        width: 100%;
+      }
+    }
     </style>
 </head>
 <body>
@@ -35,7 +227,7 @@
           <!--NAVBAR MENU-->
             <div class="nav_menu">
                 <a href="/">
-                <img src="assets/img/dark_logo.png" alt="dark_logo">
+                <img src="../../assets/img/dark_logo.png" alt="dark_logo">
                 </a>
                 <ul>
                 <li><a href="#" class="flexitem">Hombre <i class="ri-arrow-drop-down-line"></i></a></li>

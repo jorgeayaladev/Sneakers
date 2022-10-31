@@ -63,22 +63,28 @@ header {
   display: none;
 }
 
-@media only screen and (max-width: 700px) {
-  .nav_options .search {
+@media only screen and (max-width: 780px) {
+  .nav_options .favorites,
+  .nav_options .theme {
     display: none;
+  }
+
+  .nav_menu {
+    font-size: 10pt;
+  }
+
+  .nav_menu a {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav_menu a img {
+    width: 4rem;
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  .nav_menu ul li {
-    display: none;
-  }
-
-  .nav_options .menu {
-    display: block;
-  }
-
-  .nav_options .user {
+  .nav_options .search {
     display: none;
   }
 }

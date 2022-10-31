@@ -10,15 +10,11 @@
   width: 350px;
   height: 350px;
   padding-bottom: 40px;
-  position: fixed;
+  position: absolute;
   top: 125px;
   right: -350px;
   z-index: 10;
-  transform: translateX(-350px);
-  transition: 3s;
   display: none;
-  /* animation-name: inputanimate;
-  animation-duration: 3s; */
   
 }
 
@@ -80,37 +76,6 @@
   text-align: center;
   font-size: 22px;
   position: relative;
-  animation-name: loginanimate;
-  animation-duration: 3s;
   color: #fecb2a;
-}
-
-
-@keyframes inputanimate {
-
-  from { 
-    right: -300px;
-    /* opacity: 0; */
-  }
-  to {
-    right: 0px;
-    /* opacity: 1; */
-  }
-
-}
-
-@keyframes loginanimate {
-
-  from { 
-    top: -350px;
-    opacity: 0;
-    color: white;
-  }
-  to {
-    top: 0px;
-    opacity: 1;
-    color: #fecb2a;
-  }
-
 }
 
